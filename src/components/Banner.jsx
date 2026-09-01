@@ -28,17 +28,19 @@ function Banner({ setActiveSection }) {
                   <div className="contact-box-devider"></div>
                   <div className="contact-icon-box">
                     <div className="contact-icon">
-                      <a href="#">
+                      <a 
+                        href="https://www.linkedin.com/in/aslam-khan-a229ba137/" 
+                        target="_blank">
                         <i className="fa-brands fa-linkedin-in"></i>
                       </a>
                     </div>
                     <div className="contact-icon">
-                      <a href="#">
+                      <a href="mailto:aslamabrarkhan@gmail.com">
                         <i className="fa-solid fa-envelope"></i>
                       </a>
                     </div>
                     <div className="contact-icon">
-                      <a href="#">
+                      <a href="tel:+919175688848">
                         <i className="fa-solid fa-phone"></i>
                       </a>
                     </div>
