@@ -1,0 +1,1879 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Aslam Khan Abrar Khan — Senior UI Developer with 8+ years of experience building responsive, accessible and cross-browser web experiences.">
+
+  <title>Aslam Khan Abrar Khan | Senior UI Developer</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+    :root {
+      --bg: #080a0f;
+      --bg-soft: #10131a;
+      --card: rgba(255, 255, 255, 0.045);
+      --border: rgba(255, 255, 255, 0.1);
+      --text: #f5f7fa;
+      --muted: #9da4b2;
+      --accent: #8b5cf6;
+      --accent2: #22d3ee;
+      --green: #4ade80;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background:
+        radial-gradient(
+          circle at 80% 5%,
+          rgba(139, 92, 246, 0.15),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 5% 45%,
+          rgba(34, 211, 238, 0.07),
+          transparent 25%
+        ),
+        var(--bg);
+      color: var(--text);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: auto;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+
+      background: rgba(8, 10, 15, 0.78);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .nav-inner {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    .nav-buttons {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-cta,
+    .download-btn {
+      padding: 9px 15px;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      font-size: 0.82rem;
+      transition: 0.2s;
+    }
+
+    .nav-cta:hover,
+    .download-btn:hover {
+      background: white;
+      color: #08090d;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 125px 0 80px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: center;
+      gap: 70px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+
+      padding: 7px 13px;
+      margin-bottom: 22px;
+
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.025);
+      border-radius: 100px;
+
+      color: #c1c5ce;
+      font-size: 0.8rem;
+    }
+
+    .status {
+      width: 7px;
+      height: 7px;
+      background: var(--green);
+      border-radius: 50%;
+      box-shadow: 0 0 12px var(--green);
+    }
+
+    h1 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(3.1rem, 6vw, 6rem);
+      line-height: 0.95;
+      letter-spacing: -0.075em;
+    }
+
+    h1 .gradient {
+      background: linear-gradient(
+        100deg,
+        #a78bfa,
+        #22d3ee
+      );
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-role {
+      margin-top: 18px;
+      color: #d8dbe2;
+      font-size: 1.15rem;
+      font-weight: 600;
+    }
+
+    .hero-description {
+      max-width: 650px;
+      margin: 22px 0 30px;
+      color: var(--muted);
+      font-size: 1.03rem;
+    }
+
+    .hero-contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      color: #b8beca;
+      font-size: 0.85rem;
+      margin-bottom: 30px;
+    }
+
+    .hero-contact a:hover {
+      color: #a78bfa;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+
+      padding: 13px 19px;
+      border-radius: 10px;
+
+      font-size: 0.9rem;
+      font-weight: 600;
+
+      transition:
+        transform 0.2s,
+        background 0.2s,
+        border-color 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: white;
+      color: #08090d;
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--border);
+      color: #d9dce3;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.06);
+    }
+
+    /* =========================
+       CODE CARD
+    ========================= */
+
+    .code-window {
+      background: #0d1016;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+
+      box-shadow:
+        0 30px 80px rgba(0,0,0,0.45);
+
+      transform: rotate(2deg);
+      overflow: hidden;
+    }
+
+    .window-bar {
+      height: 43px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 0 15px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+    }
+
+    .red {
+      background: #ff5f57;
+    }
+
+    .yellow {
+      background: #ffbd2e;
+    }
+
+    .green-dot {
+      background: #28c840;
+    }
+
+    pre {
+      padding: 25px;
+      font: 13px/1.9 monospace;
+      color: #b7bdca;
+      overflow: hidden;
+    }
+
+    .pink {
+      color: #f472b6;
+    }
+
+    .purple {
+      color: #a78bfa;
+    }
+
+    .cyan {
+      color: #67e8f9;
+    }
+
+    .green {
+      color: #86efac;
+    }
+
+    .orange {
+      color: #fdba74;
+    }
+
+    /* =========================
+       SECTIONS
+    ========================= */
+
+    section {
+      padding: 105px 0;
+    }
+
+    .section-label {
+      color: var(--accent2);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-size: 0.72rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      letter-spacing: -0.055em;
+      margin-bottom: 45px;
+    }
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 70px;
+    }
+
+    .about-text {
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .about-text p + p {
+      margin-top: 18px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .stat {
+      padding: 25px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: var(--card);
+    }
+
+    .stat strong {
+      display: block;
+      font: 700 2rem "Space Grotesk";
+      margin-bottom: 5px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+
+    /* =========================
+       SKILLS
+    ========================= */
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 11px;
+    }
+
+    .skill {
+      padding: 11px 16px;
+      border-radius: 9px;
+
+      border: 1px solid var(--border);
+      background: var(--card);
+
+      color: #d5d8df;
+      font-size: 0.9rem;
+
+      transition: 0.2s;
+    }
+
+    .skill:hover {
+      border-color: rgba(139,92,246,0.65);
+      transform: translateY(-2px);
+    }
+
+    /* =========================
+       PROJECTS
+    ========================= */
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .project {
+      min-height: 290px;
+      padding: 30px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      position: relative;
+      overflow: hidden;
+
+      border: 1px solid var(--border);
+      border-radius: 17px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,0.055),
+          rgba(255,255,255,0.018)
+        );
+
+      transition:
+        transform 0.25s,
+        border-color 0.25s;
+    }
+
+    .project:hover {
+      transform: translateY(-6px);
+      border-color: rgba(139,92,246,0.45);
+    }
+
+    .project::after {
+      content: "";
+
+      position: absolute;
+      width: 180px;
+      height: 180px;
+
+      right: -80px;
+      top: -80px;
+
+      background: var(--accent);
+      opacity: 0.12;
+      filter: blur(30px);
+
+      border-radius: 50%;
+    }
+
+    .project-number {
+      color: #777d8b;
+      font-size: 0.75rem;
+      margin-bottom: 30px;
+    }
+
+    .project h3 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.45rem;
+      margin-bottom: 10px;
+    }
+
+    .project p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      max-width: 480px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 25px;
+    }
+
+    .tag {
+      padding: 5px 9px;
+
+      border: 1px solid var(--border);
+      border-radius: 5px;
+
+      color: #b9bdc7;
+      font-size: 0.72rem;
+    }
+
+    /* =========================
+       EXPERIENCE
+    ========================= */
+
+    .timeline {
+      border-left: 1px solid var(--border);
+      margin-left: 8px;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 0 0 45px 35px;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-item::before {
+      content: "";
+
+      position: absolute;
+      left: -5px;
+      top: 5px;
+
+      width: 9px;
+      height: 9px;
+
+      background: var(--accent);
+      border-radius: 50%;
+
+      box-shadow:
+        0 0 0 5px var(--bg);
+    }
+
+    .timeline-date {
+      color: var(--accent2);
+      font-size: 0.76rem;
+      margin-bottom: 7px;
+    }
+
+    .timeline h3 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.25rem;
+    }
+
+    .timeline-company {
+      color: #aaaeba;
+      margin: 4px 0 10px;
+    }
+
+    .timeline p {
+      color: var(--muted);
+      max-width: 720px;
+      font-size: 0.9rem;
+    }
+
+    /* =========================
+       EDUCATION
+    ========================= */
+
+    .education {
+      display: grid;
+      gap: 15px;
+    }
+
+    .education-card {
+      padding: 22px 25px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      border-radius: 13px;
+
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .education-card h3 {
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+
+    .education-card p {
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .percentage {
+      color: #a78bfa;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact-box {
+      padding: 60px;
+
+      text-align: center;
+
+      border: 1px solid var(--border);
+      border-radius: 20px;
+
+      background:
+        radial-gradient(
+          circle at 90% 20%,
+          rgba(139,92,246,0.17),
+          transparent 30%
+        ),
+        var(--card);
+    }
+
+    .contact-box h2 {
+      font: 700 clamp(2.2rem, 5vw, 4rem) "Space Grotesk";
+      letter-spacing: -0.06em;
+      margin-bottom: 15px;
+    }
+
+    .contact-box p {
+      max-width: 520px;
+      margin: 0 auto 28px;
+      color: var(--muted);
+    }
+
+    .contact-email {
+      display: block;
+      margin-top: 18px;
+      color: #c4b5fd;
+      font-weight: 600;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      padding: 28px 0;
+      border-top: 1px solid var(--border);
+      color: #6f7480;
+      font-size: 0.78rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .socials {
+      display: flex;
+      gap: 20px;
+    }
+
+    .socials a:hover {
+      color: white;
+    }
+
+    /* =========================
+       PRINT / RESUME DOWNLOAD
+    ========================= */
+
+    .resume-only {
+      display: none;
+    }
+
+    @media print {
+      @page {
+        size: A4;
+        margin: 14mm;
+      }
+
+      body {
+        background: white !important;
+        color: #111 !important;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10.5pt;
+        line-height: 1.35;
+      }
+
+      nav,
+      .hero,
+      #about,
+      #skills,
+      #projects,
+      #experience,
+      #education,
+      #contact,
+      footer {
+        display: none !important;
+      }
+
+      .resume-only {
+        display: block !important;
+      }
+
+      .resume-header {
+        text-align: center;
+        border-bottom: 1px solid #1c3762;
+        padding-bottom: 8px;
+        margin-bottom: 10px;
+      }
+
+      .resume-header h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 23px;
+        color: #233f6d;
+        letter-spacing: 0;
+        line-height: 1.2;
+      }
+
+      .resume-header h2 {
+        font-size: 13px;
+        margin-top: 3px;
+      }
+
+      .resume-contact {
+        font-size: 9px;
+        margin-top: 6px;
+      }
+
+      .resume-section {
+        margin-top: 10px;
+      }
+
+      .resume-section-title {
+        color: #233f6d;
+        font-size: 11px;
+        font-weight: bold;
+        border-bottom: 1px solid #233f6d;
+        padding-bottom: 3px;
+        margin-bottom: 7px;
+        text-transform: uppercase;
+      }
+
+      .resume-section p {
+        margin-bottom: 4px;
+      }
+
+      .resume-skills div {
+        margin-bottom: 3px;
+      }
+
+      .resume-job {
+        margin-bottom: 10px;
+      }
+
+      .resume-job-header {
+        display: flex;
+        justify-content: space-between;
+        font-weight: bold;
+      }
+
+      .resume-job ul {
+        margin: 4px 0 0 17px;
+      }
+
+      .resume-job li {
+        margin-bottom: 2px;
+      }
+
+      .resume-education-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+      }
+
+      a {
+        color: #111 !important;
+        text-decoration: none;
+      }
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 850px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .code-window {
+        display: none;
+      }
+
+      .projects {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 80px 0;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        width: min(100% - 28px, 1120px);
+      }
+
+      .download-btn {
+        display: none;
+      }
+
+      h1 {
+        font-size: 3.4rem;
+      }
+
+      .hero-contact {
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .project {
+        padding: 24px;
+      }
+
+      .contact-box {
+        padding: 40px 22px;
+      }
+
+      .education-card {
+        flex-direction: column;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
+
+  <nav>
+    <div class="container nav-inner">
+
+      <a href="#" class="logo">AK<span>.</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+      </ul>
+
+      
+
+    </div>
+  </nav>
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <header class="hero">
+
+    <div class="container hero-grid">
+
+      <div>
+
+        <div class="eyebrow">
+          <span class="status"></span>
+          Senior UI Developer · 8+ Years Experience
+        </div>
+
+        <h1>Hi,<br>
+          <span class="gradient">I'm Aslam.</span>
+        </h1>
+
+        <div class="hero-role">Frontend Developer
+        </div>
+
+        <p class="hero-description">
+          I create pixel-perfect, responsive and accessible web experiences
+          from PSD and Figma designs. I specialize in modern frontend
+          development, responsive interfaces, CMS-driven websites and
+          cross-browser compatibility.
+        </p>
+
+        <div class="hero-contact">
+          <span>📍 Yaqoob Pura, Akot, Akola, Maharashtra</span>
+
+          <a href="tel:+919175688848">
+            ☎ +91 9175688848
+          </a>
+
+          <a href="mailto:aslamabrar.khan@gmail.com">
+            ✉ aslamabrar.khan@gmail.com
+          </a>
+        </div>
+
+        <div class="buttons">
+
+          <a href="#projects" class="btn btn-primary">
+            View My Work →
+          </a>
+
+          <button class="btn btn-secondary" onclick="downloadResume()" type="button">
+            ↓ Download Resume
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- CODE CARD -->
+
+      <div class="code-window">
+
+        <div class="window-bar">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green-dot"></span>
+        </div>
+
+<pre><span class="pink">const</span> developer = {
+  <span class="cyan">name</span>: <span class="green">"Aslam Khan Abrar Khan"</span>,
+  <span class="cyan">role</span>: <span class="green">"Senior UI Developer"</span>,
+  <span class="cyan">experience</span>: <span class="orange">"8+ years"</span>,
+
+  <span class="cyan">specialties</span>: [
+    <span class="orange">"Responsive UI"</span>,
+    <span class="orange">"Pixel Perfect"</span>,
+    <span class="orange">"Accessibility"</span>,
+    <span class="orange">"Cross Browser"</span>
+  ],
+
+  <span class="cyan">framework</span>: <span class="green">"React"</span>,
+  <span class="cyan">coffee</span>: <span class="purple">true</span>
+};</pre>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       ABOUT
+  ========================= -->
+
+  <section id="about">
+
+    <div class="container">
+
+      <div class="section-label">
+        01 — About
+      </div>
+
+      <h2 class="section-title">
+        Building interfaces<br>
+        that work beautifully.
+      </h2>
+
+      <div class="about-grid">
+
+        <div class="about-text">
+
+          <p>
+            I'm a UI Developer with 8+ years of professional experience
+            converting PSD and Figma designs into pixel-perfect,
+            responsive and cross-browser websites and web applications.
+          </p>
+
+          <p>
+            My experience includes developing e-commerce platforms,
+            admin dashboards, CMS-driven websites and responsive
+            interfaces with strong attention to accessibility and
+            WCAG standards.
+          </p>
+
+          <p>
+            I have worked closely with designers, developers and QA teams
+            to deliver scalable, maintainable and high-quality products.
+            I'm currently expanding my expertise in React and
+            component-based frontend development.
+          </p>
+
+        </div>
+
+
+        <div class="stats">
+
+          <div class="stat">
+            <strong>8+</strong>
+            <span>Years Experience</span>
+          </div>
+
+          <div class="stat">
+            <strong>3+</strong>
+            <span>Companies</span>
+          </div>
+
+          <div class="stat">
+            <strong>UI</strong>
+            <span>Development Specialist</span>
+          </div>
+
+          <div class="stat">
+            <strong>WCAG</strong>
+            <span>Accessibility Focus</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       SKILLS
+  ========================= -->
+
+  <section id="skills">
+
+    <div class="container">
+
+      <div class="section-label">
+        02 — Technical Skills
+      </div>
+
+      <h2 class="section-title">
+        Technologies I work with.
+      </h2>
+
+      <div class="skills">
+
+        <span class="skill">HTML5</span>
+        <span class="skill">CSS3</span>
+        <span class="skill">Bootstrap</span>
+        <span class="skill">Responsive Design</span>
+        <span class="skill">Mobile-First Design</span>
+
+        <span class="skill">JavaScript</span>
+        <span class="skill">jQuery</span>
+
+        <span class="skill">React</span>
+
+        <span class="skill">WordPress</span>
+
+        <span class="skill">PSD to HTML</span>
+        <span class="skill">Figma to HTML</span>
+        <span class="skill">Adobe Photoshop</span>
+
+        <span class="skill">ADA</span>
+        <span class="skill">WCAG</span>
+        <span class="skill">WAVE Accessibility</span>
+
+        <span class="skill">Cross-Browser Testing</span>
+        <span class="skill">UI Debugging</span>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       PROJECTS
+  ========================= -->
+
+  <section id="projects">
+
+    <div class="container">
+
+      <div class="section-label">
+        03 — Expertise
+      </div>
+
+      <h2 class="section-title">
+        What I build.
+      </h2>
+
+      <div class="projects">
+
+        <article class="project">
+
+          <div>
+
+            <div class="project-number">
+              01 / E-COMMERCE
+            </div>
+
+            <h3>
+              Responsive E-Commerce
+            </h3>
+
+            <p>
+              Pixel-perfect e-commerce interfaces built from PSD and
+              Figma designs with responsive layouts, reusable components
+              and consistent cross-browser behavior.
+            </p>
+
+          </div>
+
+          <div class="tags">
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">Bootstrap</span>
+            <span class="tag">JavaScript</span>
+          </div>
+
+        </article>
+
+
+        <article class="project">
+
+          <div>
+
+            <div class="project-number">
+              02 / ADMIN DASHBOARD
+            </div>
+
+            <h3>
+              Admin Dashboards
+            </h3>
+
+            <p>
+              Clean and responsive dashboard interfaces designed for
+              data-heavy applications with focus on usability,
+              accessibility and maintainable UI systems.
+            </p>
+
+          </div>
+
+          <div class="tags">
+            <span class="tag">Responsive UI</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">WCAG</span>
+          </div>
+
+        </article>
+
+
+        <article class="project">
+
+          <div>
+
+            <div class="project-number">
+              03 / CMS
+            </div>
+
+            <h3>
+              WordPress Websites
+            </h3>
+
+            <p>
+              Custom responsive WordPress websites and themes with
+              optimized frontend layouts and strong browser compatibility.
+            </p>
+
+          </div>
+
+          <div class="tags">
+            <span class="tag">WordPress</span>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">jQuery</span>
+          </div>
+
+        </article>
+
+
+        <article class="project">
+
+          <div>
+
+            <div class="project-number">
+              04 / ACCESSIBILITY
+            </div>
+
+            <h3>
+              Accessible Web Interfaces
+            </h3>
+
+            <p>
+              Accessible interfaces following ADA and WCAG principles,
+              including accessibility evaluation and WAVE-based testing.
+            </p>
+
+          </div>
+
+          <div class="tags">
+            <span class="tag">ADA</span>
+            <span class="tag">WCAG</span>
+            <span class="tag">WAVE</span>
+            <span class="tag">QA</span>
+          </div>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       EXPERIENCE
+  ========================= -->
+
+  <section id="experience">
+
+    <div class="container">
+
+      <div class="section-label">
+        04 — Professional Experience
+      </div>
+
+      <h2 class="section-title">
+        My career journey.
+      </h2>
+
+      <div class="timeline">
+
+
+        <!-- VALETHI -->
+
+        <div class="timeline-item">
+
+          <div class="timeline-date">
+            MAY 2020 — PRESENT
+          </div>
+
+          <h3>
+            Sr. UI Developer
+          </h3>
+
+          <div class="timeline-company">
+            Valethi Technologies LLP · Nagpur
+          </div>
+
+          <p>
+            Developed pixel-perfect web pages by converting PSD/Figma
+            designs into responsive websites for e-commerce platforms,
+            redemption code systems and admin dashboards. Implemented
+            web accessibility standards, collaborated with designers,
+            developers and QA teams, and mentored a team of 3 UI developers.
+          </p>
+
+        </div>
+
+
+        <!-- SPACEWOOD -->
+
+        <div class="timeline-item">
+
+          <div class="timeline-date">
+            FEBRUARY 2018 — MARCH 2020
+          </div>
+
+          <h3>
+            UI Developer
+          </h3>
+
+          <div class="timeline-company">
+            Spacewood Furnishers Pvt. Ltd. · Nagpur
+          </div>
+
+          <p>
+            Designed and implemented web templates as a front-end
+            designer and developer. Built templates using HTML, CSS,
+            Bootstrap, jQuery and WordPress, along with HTML email
+            templates and frontend testing.
+          </p>
+
+        </div>
+
+
+        <!-- VOWEL -->
+
+        <div class="timeline-item">
+
+          <div class="timeline-date">
+            NOVEMBER 2017 — FEBRUARY 2018
+          </div>
+
+          <h3>
+            UI Developer
+          </h3>
+
+          <div class="timeline-company">
+            Vowel Web · Nagpur
+          </div>
+
+          <p>
+            Converted provided PSD designs into functional WordPress
+            themes and built responsive frontend layouts with strong
+            cross-browser compatibility.
+          </p>
+
+        </div>
+
+
+        <!-- AXIOM -->
+
+        <div class="timeline-item">
+
+          <div class="timeline-date">
+            SEPTEMBER 2016 — JANUARY 2017
+          </div>
+
+          <h3>
+            UI Developer Intern
+          </h3>
+
+          <div class="timeline-company">
+            Axiom Infovision · Nagpur
+          </div>
+
+          <p>
+            Converted PSD designs into web pages using HTML5, CSS3 and
+            Bootstrap, while coordinating with the Project Manager and
+            stakeholders for timely project updates.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       EDUCATION
+  ========================= -->
+
+  <section id="education">
+
+    <div class="container">
+
+      <div class="section-label">
+        05 — Education
+      </div>
+
+      <h2 class="section-title">
+        Education &amp; qualifications.
+      </h2>
+
+      <div class="education">
+
+        <div class="education-card">
+
+          <div>
+            <h3>
+              Bachelor of Engineering — Computer Science &amp; Engineering
+            </h3>
+
+            <p>
+              Anjuman College of Engineering and Technology, Nagpur
+              (RTMNU)
+            </p>
+          </div>
+
+          <div class="percentage">
+            59.25%
+          </div>
+
+        </div>
+
+
+        <div class="education-card">
+
+          <div>
+            <h3>
+              HSC
+            </h3>
+
+            <p>
+              State Board of Maharashtra
+            </p>
+          </div>
+
+          <div class="percentage">
+            68.00%
+          </div>
+
+        </div>
+
+
+        <div class="education-card">
+
+          <div>
+            <h3>
+              SSC
+            </h3>
+
+            <p>
+              State Board of Maharashtra
+            </p>
+          </div>
+
+          <div class="percentage">
+            78.00%
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CONTACT
+  ========================= -->
+
+  <section id="contact">
+
+    <div class="container">
+
+      <div class="contact-box">
+
+        <div class="section-label">
+          06 — Contact
+        </div>
+
+        <h2>
+          Let's Connect.
+</h2>
+
+        <p>I’m open to opportunities where I can contribute my 8+ years of UI development experience, build high-quality frontend experiences, and grow with a great team. Whether you’re hiring for a UI Developer / Frontend Developer role, looking for a contract resource, or simply want to discuss an opportunity, I’d be happy to connect.</p>
+
+        <div class="buttons" style="justify-content:center;">
+
+          <a href="tel:+919175688848" class="btn btn-primary">
+            Call Me ↗
+          </a>
+
+          <a href="mailto:aslamabrar.khan@gmail.com" class="btn btn-primary">
+            Email Me ↗
+          </a><a href="https://www.linkedin.com/in/aslam-khan" target="_blank" rel="noopener" class="btn btn-secondary">
+            LinkedIn ↗
+          </a>
+
+          <button class="btn btn-secondary" onclick="downloadResume()" type="button">
+            ↓ Download Resume
+          </button>
+
+        </div>
+
+        <a href="mailto:aslamabrar.khan@gmail.com" class="contact-email">Open to full-time, contract &amp; freelance opportunities.</a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <span>
+        © 2026 Aslam Khan Abrar Khan. All rights reserved.
+      </span>
+
+      <div class="socials">
+
+        <a href="https://www.linkedin.com/in/aslam-khan" target="_blank" rel="noopener">
+          LinkedIn
+        </a>
+
+        <a href="mailto:aslamabrar.khan@gmail.com">
+          Email
+        </a>
+
+        <a href="tel:+919175688848">
+          Phone
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- ==========================================================
+       PRINTABLE RESUME
+
+       This section is hidden on the website and becomes visible
+       when the user clicks "Download Resume".
+  =========================================================== -->
+
+  <div class="resume-only">
+
+    <div class="resume-header">
+
+      <h1>
+        ASLAM KHAN ABRAR KHAN
+      </h1>
+
+      <h2>
+        SENIOR UI DEVELOPER
+      </h2>
+
+      <div class="resume-contact">
+        Yaqoob Pura, Akot - 444101, Dist. Akola (M.S.) |
+        9175688848 |
+        aslamabrar.khan@gmail.com |
+        www.linkedin.com/in/aslam-khan
+      </div>
+
+    </div>
+
+
+    <div class="resume-section">
+
+      <div class="resume-section-title">
+        Professional Summary
+      </div>
+
+      <p>
+        UI Developer with 8+ years of experience converting PSD and Figma
+        designs into pixel-perfect, responsive, cross-browser websites and
+        web applications. Proven track record delivering scalable front-end
+        solutions for e-commerce platforms, admin dashboards, and
+        CMS-driven websites, with hands-on experience in web accessibility
+        (ADA/WAVE compliance). Skilled at leading and mentoring UI
+        development teams and collaborating closely with designers,
+        developers, and QA to ship high-quality products. Currently
+        expanding into React to build modern, component-based interfaces.
+      </p>
+
+    </div>
+
+
+    <div class="resume-section">
+
+      <div class="resume-section-title">
+        Technical Skills
+      </div>
+
+      <div class="resume-skills">
+
+        <div>
+          <strong>Markup &amp; Styling:</strong>
+          HTML5, CSS3, Bootstrap, Responsive/Mobile-First Design.
+        </div>
+
+        <div>
+          <strong>Scripting:</strong>
+          JavaScript, jQuery
+        </div>
+
+        <div>
+          <strong>Frameworks (Learning):</strong>
+          React
+        </div>
+
+        <div>
+          <strong>CMS &amp; Platforms:</strong>
+          WordPress
+        </div>
+
+        <div>
+          <strong>Design &amp; Tools:</strong>
+          Adobe Photoshop, PSD/Figma to HTML conversion.
+        </div>
+
+        <div>
+          <strong>Accessibility &amp; QA:</strong>
+          ADA/WCAG compliance (WAVE tool), Cross-browser testing &amp; debugging.
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="resume-section">
+
+      <div class="resume-section-title">
+        Professional Experience
+      </div>
+
+
+      <div class="resume-job">
+
+        <div class="resume-job-header">
+          <span>
+            Sr. UI Developer / Valethi Technologies LLP, Nagpur
+          </span>
+
+          <span>
+            May 2020 - Present
+          </span>
+        </div>
+
+        <ul>
+          <li>
+            Developed pixel-perfect web pages by converting PSD/Figma designs
+            into responsive websites for e-commerce platforms, redemption
+            code systems, and admin dashboards.
+          </li>
+
+          <li>
+            Built fully responsive web interfaces with consistent
+            cross-browser compatibility.
+          </li>
+
+          <li>
+            Implemented web accessibility standards by performing ADA
+            compliance checks using the WAVE accessibility evaluation tool.
+          </li>
+
+          <li>
+            Collaborated with designers, developers, and QA teams to deliver
+            high-quality, scalable web solutions.
+          </li>
+
+          <li>
+            Managed and mentored a team of 3 UI developers, establishing UI
+            development best practices and reviewing implementations.
+          </li>
+        </ul>
+
+      </div>
+
+
+      <div class="resume-job">
+
+        <div class="resume-job-header">
+          <span>
+            UI Developer / Spacewood Furnishers Pvt. Ltd., Nagpur
+          </span>
+
+          <span>
+            February 2018 - March 2020
+          </span>
+        </div>
+
+        <ul>
+
+          <li>
+            Designed and implemented web templates as front-end designer
+            and developer for a leading furniture manufacturer.
+          </li>
+
+          <li>
+            Built templates using HTML, CSS, Bootstrap, jQuery, and WordPress.
+          </li>
+
+          <li>
+            Designed and implemented HTML email templates.
+          </li>
+
+          <li>
+            Performed testing and debugging to ensure consistent,
+            reliable front-end performance.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="resume-job">
+
+        <div class="resume-job-header">
+          <span>
+            UI Developer / Vowel Web, Nagpur
+          </span>
+
+          <span>
+            November 2017 - February 2018
+          </span>
+        </div>
+
+        <ul>
+
+          <li>
+            Converted provided PSD designs into fully functional
+            WordPress themes.
+          </li>
+
+          <li>
+            Built responsive front-end layouts with strong
+            cross-browser compatibility.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="resume-job">
+
+        <div class="resume-job-header">
+          <span>
+            UI Developer Intern / Axiom Infovision, Nagpur
+          </span>
+
+          <span>
+            September 2016 - January 2017
+          </span>
+        </div>
+
+        <ul>
+
+          <li>
+            Converted PSD designs into web pages using HTML5, CSS3,
+            and Bootstrap.
+          </li>
+
+          <li>
+            Coordinated with the Project Manager and stakeholders to
+            provide timely project status updates.
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <div class="resume-section">
+
+      <div class="resume-section-title">
+        Education
+      </div>
+
+      <div class="resume-education-row">
+        <span>
+          <strong>
+            Bachelor of Engineering, Computer Science &amp; Engineering
+          </strong>
+          — Anjuman College of Engineering and Technology, Nagpur (RTMNU)
+        </span>
+
+        <strong>
+          59.25%
+        </strong>
+      </div>
+
+      <div class="resume-education-row">
+
+        <span>
+          <strong>HSC</strong>
+          — State Board of Maharashtra
+        </span>
+
+        <strong>
+          68.00%
+        </strong>
+
+      </div>
+
+      <div class="resume-education-row">
+
+        <span>
+          <strong>SSC</strong>
+          — State Board of Maharashtra
+        </span>
+
+        <strong>
+          78.00%
+        </strong>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
+
+  <script>
+
+    /*
+      Opens the browser's print dialog.
+
+      From the print dialog:
+      Destination → Save as PDF
+
+      The @media print CSS above automatically converts
+      the printable resume into an A4 resume layout.
+    */
+
+    function downloadResume() {
+      window.print();
+    }
+
+
+    /*
+      Smoothly close the mobile/menu behavior if you
+      later add a mobile navigation.
+    */
+
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+
+      link.addEventListener("click", function(e) {
+
+        const target = document.querySelector(
+          this.getAttribute("href")
+        );
+
+        if (target) {
+
+          e.preventDefault();
+
+          target.scrollIntoView({
+            behavior: "smooth"
+          });
+
+        }
+
+      });
+
+    });
+
+  </script>
+
+
+
+</body></html>

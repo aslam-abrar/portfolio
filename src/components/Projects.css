@@ -1,0 +1,29 @@
+.project-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 25px;
+}
+.project-arrow {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 10px;
+  color: #FFF5E1;
+  background: #D00000;
+  border: 0;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 14px;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+.project-arrow:hover,
+.project-arrow:focus,
+.project-arrow:active{
+  color: #D00000;
+  background: #FFF5E1;
+}
