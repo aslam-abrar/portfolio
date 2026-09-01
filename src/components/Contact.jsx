@@ -20,8 +20,8 @@ function Contact() {
               </div>
             
               <div className="theme-btn-box">
-                <a
-                  href="/resume/resume.pdf"
+                <a 
+                href="https://www.linkedin.com/in/aslam-khan-a229ba137/"
                   className="btn theme-btn-primary"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -46,7 +46,7 @@ function Contact() {
                 <div className="contact-info-inner">
                   <div className="contact-info-box">
                     <div className="contact-icon contact-info-icon">
-                      <a href="#">
+                      <a href="tel:+919175688848">
                         <i className="fa-solid fa-phone"></i>
                       </a>
                     </div>
@@ -57,7 +57,7 @@ function Contact() {
                   </div>
                   <div className="contact-info-box">
                     <div className="contact-icon contact-info-icon">
-                      <a href="#">
+                      <a href="mailto:aslamabrarkhan@gmail.com">
                         <i className="fa-solid fa-envelope"></i>
                       </a>
                     </div>
