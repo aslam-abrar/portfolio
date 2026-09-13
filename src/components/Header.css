@@ -196,6 +196,10 @@
     color: #0A0A0A;
     background: rgba(255, 245, 225, 0.85);
   }
+  #headerArea .main-nav .nav-link.active:hover {
+    color: #fff5e1;
+    background: #d00000;
+  }
 }
 
 @media (max-width: 575.98px) {
