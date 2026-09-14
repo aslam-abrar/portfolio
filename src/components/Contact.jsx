@@ -9,7 +9,7 @@ function Contact() {
       <div className="theme-container contact-container">
         <div className="container-fluid">
           <div className="row align-items-center">
-            <div className="col-lg-7">
+            <div className="col-lg-7 col-12">
               <div className="section-title-box">
                 <h2 className="section-title experience-title">
                   <span>Let's </span>Connect.
@@ -41,7 +41,7 @@ function Contact() {
               </div>
             </div>
             {/* Right Content */}
-            <div className="col-lg-4 offset-lg-1 mt-5 mt-lg-0">
+            <div className="col-xl-4 offset-xl-1 col-lg-5 col-12">
               <div className="contact-info">
                 <div className="contact-info-inner">
                   <div className="contact-info-box">
