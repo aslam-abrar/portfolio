@@ -199,7 +199,7 @@
 }
 .floating-card {
   position: absolute;
-  padding: 13px 17px;
+  padding: 15px;
   background: #0A0A0A;
   border: 1px solid rgba(255, 245, 225, 0.1);
   border-radius: 11px;
@@ -208,17 +208,21 @@
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
   z-index: 1;
 }
-.floating-card strong {
+.floating-card p span {
   color: #FFF5E1;
   font-family: "Space Grotesk", sans-serif;
-  font-size: 21px;
-  line-height: 1.2;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
 }
-.floating-card span {
-  margin-top: 5px;
+.floating-card p {
+  margin: 0;
   color: #FFF5E1;
   font-size: 12px;
   line-height: 14px;
+}
+.floating-card p + p {
+  margin-top: 5px;
 }
 .card-one {
   left: 0px;
@@ -228,8 +232,9 @@
   top: 70px;
   right: -0;
 }
-.card-two strong,
-.floating-card strong {
+.card-two p span,
+.floating-card p span {
+  display: inline-block;
   background: linear-gradient(45deg, rgba(208, 0, 0, 1) 25%, #FFF5E1 100%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -265,6 +270,16 @@
   .profile-contact-box{
     padding-top: 20px;
     gap: 20px;
+  }
+
+  .card-one {
+    bottom: 50px;
+  }
+  .card-two {
+    top: 80px;
+  }
+  .floating-card{
+    padding: 10px;
   }
 }
 
