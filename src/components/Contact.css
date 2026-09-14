@@ -44,6 +44,8 @@
   border: 1px solid rgba(10, 10, 10, 0.1);
 }
 .contact-info-box {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -78,6 +80,9 @@
   color: #0A0A0A;
   font-size: 14px;
   line-height: 16px;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .bottom-note a{
@@ -105,8 +110,27 @@
   .contact-info-inner{
     padding: 20px;
   }
-  contact-info-item h3 {
+  .contact-info-item h3 {
     font-size: 20px;
     line-height: 24px;
+  }
+  .contact-info-box{
+    gap: 15px;
+    padding: 15px 0;
+  }
+  .contact-icon a {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+  .contact-icon i {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+@media(max-width: 575.98px){
+  .contact-info-inner {
+    padding: 15px;
   }
 }
