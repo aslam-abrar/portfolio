@@ -104,12 +104,12 @@ function About() {
                 </div>
                 {/* Floating Cards */}
                 <div className="floating-card d-flex flex-column card-one">
-                  <strong>3+</strong>
-                  <span>Companies</span>
+                  <p><span>3+</span></p>
+                  <p>Companies</p>
                 </div>
                 <div className="floating-card d-flex flex-column card-two">
-                  <strong>8+</strong>
-                  <span>Years Experience</span>
+                  <p><span>8+</span></p>
+                  <p>Years Experience</p>
                 </div>
               </div>
             </div>
