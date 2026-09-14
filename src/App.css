@@ -440,12 +440,23 @@ p.section-description span {
   .page-content{
     padding-top: 70px;
   }
+
+  .section-title {
+    font-size: 50px;
+    line-height: 50px;
+    letter-spacing: -3px;
+    margin-bottom: 20px;
+  }
   .section-content {
     margin: 0 auto;
   }
   .section-description {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .theme-card-box {
+    min-height: max-content;
   }
 }
 
@@ -459,12 +470,6 @@ p.section-description span {
     padding-bottom: 40px;
   }
 
-  .section-title {
-    font-size: 50px;
-    line-height: 50px;
-    letter-spacing: -3px;
-    margin-bottom: 20px;
-  }
   .hero-role {
     font-size: 20px;
     line-height: 24px;
