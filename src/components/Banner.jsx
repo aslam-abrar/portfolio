@@ -184,15 +184,14 @@ function Banner({ setActiveSection }) {
                   </div>
                 </div>
 
-                {/* Floating Card 1 */}
+                {/* Floating Cards */}
                 <div className="floating-card d-flex flex-column card-one">
-                  <strong>8+</strong>
-                  <span>Years Experience</span>
+                  <p><span>8+</span></p>
+                  <p>Years Experience</p>
                 </div>
-                {/* Floating Card 2 */}
                 <div className="floating-card d-flex flex-column card-two">
-                  <strong>&lt;/&gt;</strong>
-                  <span>Pixel Perfect</span>
+                  <p><span>&lt;/&gt;</span></p>
+                  <p>Pixel Perfect</p>
                 </div>
               </div>
             </div>
