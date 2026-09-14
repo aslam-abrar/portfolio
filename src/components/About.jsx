@@ -1,172 +1,520 @@
-import "./About.css";
-import profileImage from "../assets/images/aslam-khan-image.jpg";
+/*
+ Common CSS
+*/
 
-function About() {
-  return (
-    <section className="about page-section">
-      <div className="section-label-box">
-        <p className="section-label">ABOUT ME</p>
-      </div>
-      <div className="theme-container about-container">
-        <div className="container-fluid">
-          <div className="row align-items-center">
-            {/* Left Content */}
-            <div className="col-lg-7 col-12">
-              <div className="section-content about-content">
-                <div className="about-content-top">
-                  <h2 className="section-title about-title">
-                    <span>ABOUT</span> ME.
-                  </h2>
-                  <p className="hero-role">Frontend Developer</p>
-                  <p className="section-description"><span>Hi! I'm Aslam Khan</span>, I'm a UI Developer with 8+ years of professional experience converting PSD and Figma designs into pixel-perfect, responsive and cross-browser websites and web applications.</p>
-                  <p className="section-description">I have worked closely with designers, developers and QA teams to deliver scalable, maintainable and high-quality products. I'm currently expanding my expertise in React and component-based frontend development.</p>
-                </div>
-                <div className="grids-row about-content-bot about-highlights row g-3">
-                  <div className="col-md-4 col-sm-4 col-12">
-                    <div className="grid-light about-highlight">
-                      <strong>Frontend</strong>
-                      <span>Development</span>
-                    </div>
-                  </div>
-                  <div className="col-md-4 col-sm-4 col-12">
-                    <div className="grid-light about-highlight">
-                      <strong>Responsive</strong>
-                      <span>Web Design</span>
-                    </div>
-                  </div>
-                  <div className="col-md-4 col-sm-4 col-12">
-                    <div className="grid-light about-highlight">
-                      <strong>Clean</strong>
-                      <span>UI & Code</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Right Content*/}
-            <div className="col-lg-5 col-12">
-              <div className="banner-visual d-flex align-items-center justify-content-center">
-                <div className="code-card">
-                  <div className="code-header d-flex align-items-center">
-                    <div className="window-dots d-flex">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
-                    <div className="window-title">
-                      about.jsx
-                    </div>
-                  </div>
-                  <div className="code-body">
-                    <div>
-                      <span className="code-purple">import </span> 
-                      <span className="code-blue">profileImage </span>
-                      <span className="code-purple">from </span> 
-                      <span className="code-orange">"./assets/profile.jpg"</span> 
-                      <span className="code-black">;</span>
-                    </div>
-                    <div className="code-box code-box-one">
-                      <div>
-                        <span className="code-black">{"<"}</span>
-                        <span className="code-blue">img </span>
-                      </div> 
-                      <div className="code-box code-box-two">
-                        <div className="code-indent">
-                          <span className="code-green">src=</span> {" { "}
-                          <div className="code-indent">
-                            <div className="profile-image-wrapper">
-                              <img
-                                src={profileImage}
-                                alt="Profile Aslam Khan"
-                                className="profile-image"
-                              /> 
-                            </div>
-                          </div>
-                          <span className="code-black">
-                            {" { "}
-                          </span>
-                        </div>
-                      </div>
-                      <div className="code-indent">
-                        <span className="code-green">alt=</span>
-                        <span className="code-orange">"Aslam Khan Profile Image."</span>
-                      </div>
-                      <div className="code-indent">
-                        <span className="code-green">className=</span>
-                        <span className="code-orange">"profile-image"</span>
-                      </div>
-                      <div>
-                        <span className="code-black"> {" /> "}</span>
-                        <span className="code-cursor">▋</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {/* Floating Cards */}
-                <div className="floating-card d-flex flex-column card-one">
-                  <p><span>3+</span></p>
-                  <p>Companies</p>
-                </div>
-                <div className="floating-card d-flex flex-column card-two">
-                  <p><span>8+</span></p>
-                  <p>Years Experience</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="grid-dark-box personal-gids-box">
-            <div className="container-fluid">
-              <div className="grids-row row g-3 justify-content-center">
-                  <div className="col-lg-3 col-md-6 col-sm-6 col-12">
-                    <div className="grid-dark">
-                      <span className="grid-dark-icon">
-                        <i className="fa-solid fa-graduation-cap"></i>
-                      </span>
-                      <h4>Education </h4>
-                      <p>(B.E.) in Computer Science</p>
-                    </div>
-                  </div>
-                  <div className="col-lg-3 col-md-6 col-sm-6 col-12">
-                    <div className="grid-dark">
-                      <span className="grid-dark-icon">
-                        <i className="fa-solid fa-cake-candles"></i>
-                      </span>
-                      <h4>Date of birth</h4>
-                      <p>April 02, 1991</p>
-                    </div>
-                  </div>
-                  <div className="col-lg-3 col-md-6 col-sm-6 col-12">
-                    <div className="grid-dark">
-                      <span className="grid-dark-icon">
-                        <i className="fa-solid fa-language"></i>
-                      </span>
-                      <h4>Spoken Languages</h4>
-                      <p>Hindi - Marathi - English</p>
-                    </div>
-                  </div>
-                  <div className="col-lg-3 col-md-6 col-sm-6 col-12">
-                    <div className="grid-dark">
-                      <span className="grid-dark-icon">
-                        <i className="fa-solid fa-circle-check"></i>
-                      </span>
-                      <h4>Availability</h4>
-                      <p>Available for Freelance / Full-time</p>
-                    </div>
-                  </div>
-              </div>
-          </div>
-        </div>
-      </div>
-      
-      <div className="bg-effect">
-        <span>PORTFOLIO</span>
-        <span>PORTFOLIO</span>
-        <span>PORTFOLIO</span>
-        <span>PORTFOLIO</span>
-      </div>
-    </section>
-  );
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-export default About;
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+body {
+  background: #0A0A0A;
+  color: #ffffff;
+  font-family:"DM Sans", Arial, sans-serif;
+  overflow: hidden;
+}
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+/* APP */
+.app {
+  width: 100%;
+  height: 100vh;
+  background: #0A0A0A;
+}
+
+.page-content {
+  width: 100%;
+  height: 100vh;
+  padding-top: 75px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: #0A0A0A transparent;
+}
+
+/* Chrome / Edge / Safari */
+.page-content::-webkit-scrollbar {
+  width: 6px;
+}
+.page-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+.page-content::-webkit-scrollbar-thumb {
+  background: #0A0A0A;
+  border-radius: 10px;
+}
+.page-content::-webkit-scrollbar-thumb:hover {
+  background: #BDBDBD;
+}
+
+.theme-container {
+  width: 100%;
+  padding: 0 35px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.theme-btn-box {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 30px;
+}
+.btn.theme-btn-primary {
+  min-height: 45px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #0A0A0A;
+  background: #FFF5E1;
+  border: 1px solid #FFF5E1;
+  transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
+.btn.theme-btn-primary:hover {
+  color: #FFF5E1;
+  background: #0A0A0A;
+  border-color: #0A0A0A;
+  transform: translateY(-3px);
+}
+
+.btn.theme-btn-secondry{
+  min-height: 45px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #FFF5E1;
+  background: #D00000;
+  border: 1px solid #D00000;
+  transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
+.btn.theme-btn-secondry:hover {
+  color: #D00000;
+  background: #FFF5E1;
+  border: 1px solid #FFF5E1;
+  transform: translateY(-3px);
+}
+
+.page-section {
+  width: 100%;
+  min-height: 100%;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 75% 40%, rgba(208, 0, 0, 0.35), transparent 35%),
+    radial-gradient(circle at 15% 75%, rgba(255, 245, 225, 0.05), transparent 25%),
+    #0A0A0A;
+}
+.page-section::before {
+  content: "";
+  position: absolute;
+  width: 650px;
+  height: 650px;
+  top: -325px;
+  right: -200px;
+  border: 5px solid rgba(255, 245, 225, 0.25);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.page-section::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  left: -250px;
+  bottom: -300px;
+  border: 1px solid rgba(208, 0, 0, 0.8);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.section-label-box {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  opacity: 0.05;
+  transform: rotate(-90deg) translate(-50%, 0%);
+  -webkit-transform: rotate(-90deg) translate(-50%, 0%);
+    -moz-transform: rotate(-90deg) translate(-50%, 0%);
+      -ms-transform: rotate(-90deg) translate(-50%, 0%);
+  transform-origin: left top;
+}
+.section-label-box p{
+  margin: 0;
+  font-size: 145px;
+  font-weight: 800;
+  color: #FFF5E1;
+  letter-spacing: -5px;
+  line-height: 145px;
+  white-space: nowrap;
+}
+.bg-effect {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  right: 0;
+  top: 0;
+}
+.bg-effect span {
+  color: transparent;
+  font-size: 95px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  line-height: 80px;
+  -webkit-text-stroke: 1px rgba(255, 245, 225, 0.05);
+  white-space: nowrap;
+}
+
+.section-content {
+  position: relative;
+  z-index: 1;
+}
+.section-title-box{
+  margin-bottom: 30px;
+}
+.section-title {
+  margin: 0;
+  margin-bottom: 30px;
+  color: #FFF5E1;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 85px;
+  font-weight: 700;
+  line-height: 85px;
+  letter-spacing: -5px;
+}
+.section-title span {
+  background-clip: text;
+  color: transparent;
+  background: linear-gradient(45deg, rgba(208, 0, 0, 1) 30%, #ff6262 100%);
+  -webkit-background-clip: text;
+}
+.section-description{
+  margin: 20px 0 0;
+  color: #FFF5E1;
+  font-size: 16px;
+  line-height: 24px;
+}
+p.section-description span {
+  color: #ff6262;
+  font-weight: 700;
+}
+
+.grid-light {
+  height: 100%;
+  padding: 15px;
+  background: #FFF5E1;
+  border: #FFF5E1;
+  border-radius: 8px;
+  transition: 0.25s ease;
+  box-shadow: 0 15px 40px rgba(10, 10, 10, 0.35);
+}
+.grid-light:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 245, 225, 0.90);
+  border-color: rgba(255, 245, 225, 0.25);
+}
+.grid-light strong {
+  display: block;
+  color: #D00000;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+}
+.grid-light span {
+  display: block;
+  margin-top: 4px;
+  color: #0A0A0A;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+/* Theme Grids */
+.theme-grids-box{
+  margin-top: 30px;
+}
+.theme-card-box {
+  height: 100%;
+  min-height: 180px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(150deg, rgba(255, 245, 225, 1), rgba(208, 0, 0, 0.15));
+  background-color: rgba(255, 245, 225, 0.75);
+  border: 1px solid #FFF5E1;
+  border-radius: 15px;
+  transition: transform 0.25s ease;
+}
+.theme-card-box:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(150deg, rgba(255, 245, 225, 0.5), rgba(208, 0, 0, 0.25));
+  background-color: rgba(255, 245, 225, 0.95);
+  border-color: rgba(255, 245, 225, 0.25);
+}
+ .theme-card-box::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: -50px;
+  right: -50px;
+  border:  1px solid rgba(10, 10, 10, 0.08);
+  border-radius: 50%;
+}
+.theme-card-box::after {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  bottom: -120px;
+  left: -80px;
+  border: 1px solid rgba(10, 10, 10, 0.1);
+  border-radius: 50%;
+  z-index: 0;
+}
+.theme-card-content {
+  margin-top: 30px;
+}
+.theme-card-content p {
+  margin: 0;
+  color: #0A0A0A;
+  font-size: 14px;
+  line-height: 20px;
+}
+.theme-card-box-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.theme-card-number {
+  color: #D00000;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  font-family: "Space Grotesk", sans-serif;
+}
+.theme-card-line {
+  height: 1px;
+  flex: 1;
+  background: rgba(10, 10, 10, 0.15);
+}
+.theme-card-box h3 {
+  margin: 0 0 15px;
+  color: #D00000;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.theme-card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.theme-card-list span {
+  padding: 5px 8px;
+  color: #FFF5E1;
+  background: rgba(10, 10, 10, 0.95);
+  border: 1px solid rgba(10, 10, 10, 1);
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 14px;
+  transition: transform 0.25s ease;
+}
+.theme-card-list span:hover {
+  color: #FFF5E1;
+  background: rgba(10, 10, 10, 0.85);
+  border: 1px solid rgba(10, 10, 10, 1);
+}
+
+/* Note */
+.bottom-note {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 245, 225, 0.1);
+}
+.bottom-note span {
+  flex-shrink: 0;
+  color: #FFF5E1;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 18px;
+}
+.bottom-note p {
+  margin: 0;
+  color: #FFF5E1;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0;
+}
+
+/* Animations */
+@keyframes activeCirclePulse {
+  0%,
+  100% {
+    transform: scale(0.9);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes floatCard {
+  0%,
+  100% {
+    transform: rotate(2deg) translateY(0);
+  }
+
+  50% {
+    transform: rotate(2deg) translateY(-10px);
+  }
+}
+
+@keyframes blink {
+  0%,
+  45% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024.98px) {
+  .page-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .bg-effect {
+    top: 5%;
+  }
+  .bg-effect span {
+    font-size: 60px;
+    line-height: 60px;
+  }
+  .page-content{
+    padding-top: 70px;
+  }
+  .section-content {
+    margin: 0 auto;
+  }
+  .section-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 767.98px){
+  .theme-container {
+    width: 100%;
+    padding: 0 5px;
+  }
+  .page-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .section-title {
+    font-size: 50px;
+    line-height: 50px;
+    letter-spacing: -3px;
+    margin-bottom: 20px;
+  }
+  .hero-role {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 0;
+  }
+  .section-description{
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .bg-effect span {
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: 2px;
+    -webkit-text-stroke: 1px rgba(255, 245, 225, 0.02);
+  }
+  .section-label-box p {
+    font-size: 110px;
+    line-height: 110px;
+  }
+  
+  .theme-btn-box {
+    align-items: stretch;
+    flex-direction: column;
+    margin-top: 24px;
+  }
+  .theme-btn-box .btn {
+    width: 100%;
+  }
+
+  .theme-card-box{
+    padding: 15px;
+  }
+  .theme-card-box h3 {
+    font-size: 20px;
+  }
+  .theme-card-content,
+  .project-bottom{
+    margin-top: 15px;
+  }
+  .section-title {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .bottom-note {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+  }
+}
