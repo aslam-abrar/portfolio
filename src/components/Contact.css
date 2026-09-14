@@ -1,5 +1,4 @@
 .contact-info {
-  min-height: 480px;
   position: relative;
   display: flex;
   align-items: center;
@@ -51,8 +50,12 @@
   padding: 20px 0;
   border-bottom: 1px solid rgba(10, 10, 10, 0.25);
 }
+.contact-info-box:first-child {
+  padding-top: 0;
+}
 .contact-info-box:last-child {
   border-bottom: none;
+  padding-bottom: 0;
 }
 .contact-icon.contact-info-icon a {
   background: rgba(10, 10, 10, 0.95);
@@ -84,4 +87,26 @@
   line-height: 16px;
   letter-spacing: 0;
   text-decoration: none;
+}
+
+/* Responsive */
+@media(max-width: 991.98px){
+  .contact-info{
+    display: block;
+    width: 100%;
+    margin-top: 40px;
+  }
+  .contact-info-inner{
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .contact-info-inner{
+    padding: 20px;
+  }
+  contact-info-item h3 {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
